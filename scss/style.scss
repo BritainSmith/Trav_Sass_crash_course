@@ -22,8 +22,7 @@ a {
 }
 
 .showcase {
-  background-color: $primary-color;
-  color: #fff;
+  @include set-background($primary-color);
   height: 600px;
 
   nav {
@@ -38,12 +37,13 @@ a {
     li {
       padding: 15px;
     }
-  }
-  a:hover {
-    color: $secondary-color;
-  }
-  a {
-    color: #fff;
+    a {
+      color: set-text-color($primary-color);
+    }
+
+    a:hover {
+      color: $secondary-color;
+    }
   }
 
   .showcase-content {
@@ -57,9 +57,6 @@ a {
     h1 {
       font-size: 50px;
       line-height: 1.2;
-    }
-    p {
-      margin: 20px 0;
     }
   }
 }
